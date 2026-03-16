@@ -1,51 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <style>
+    <title>Mening Vizitkam</title>
+    <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e3f2fd; /* Och ko'k fon */
+        }
+
+        .card {
+            background: #ffffff;
+            width: 350px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .Abubakr {
-            width: 200px;
-            height: 300px;
-            background-color: rgb(47, 255, 78);
-            margin-top: 20px;
-            margin-left: 45%;
-            font-size: 20px;
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background-color: #2196f3;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
+            font-size: 40px;
+            font-weight: bold;
         }
 
-        p {
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .info-item {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #2196f3;
+            text-align: left;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #666;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .info-value {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
             margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
 
-        button {
-            width: 150px;
-            height: 50px;
-            border-radius: 30px;
-            border-style: none;
-            color: white;
-            background-color: rgb(255, 157, 87);
-            margin-top: 30px;
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #1e88e5, #1565c0);
         }
     </style>
 </head>
+
 <body>
-     <div class="Abubakr">
-        <p>Name:Abubakr</p>
-        <p>Surename:Zayniddinov</p>
-        <p>Age:14</p>
-        <p>Hobby:Football</p>
-         <Button>Submit</Button>
+    <div class="card">
+        <div class="profile-img">A</div>
+        <h2>Men haqimda</h2>
+        
+        <div class="info-item">
+            <span class="info-label">Ism va Familiya:</span>
+            <span class="info-value">Abubakr Zayniddinov</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Yoshim:</span>
+            <span class="info-value">14 yosh</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Hobbyim:</span>
+            <span class="info-value">Futbol</span>
+        </div>
+
+        <button class="btn-submit">Bog'lanish</button>
     </div>
 </body>
+
 </html>
